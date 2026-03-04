@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Instagram Projects</title>
+
+<style>
+/* ================= INSTAGRAM PROJECTS ================= */
+
+.insta-projects{
+  padding:80px 40px;
+  text-align:center;
+}
+
+.insta-projects h2{
+  margin-bottom:40px;
+}
+
+/* GRID */
+.insta-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* CARD */
+.insta-card{
+  position:relative;
+  background:#0e223d;
+  height:220px;
+  border-radius:16px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+
+/* LOGO */
+.insta-card .logo{
+  max-width:60%;
+  transition:0.4s ease;
+  z-index:2;
+}
+
+/* PREVIEW SLIDER */
+.preview-track{
+  position:absolute;
+  inset:0;
+  display:flex;
+  width:200%;
+  opacity:0;
+}
+
+.preview-track img{
+  width:50%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* SLIDE ANIMATION */
+@keyframes instaSlide{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-50%); }
+}
+
+/* OPEN TEXT */
+.open-text{
+  position:absolute;
+  bottom:15px;
+  background:#e1306c;
+  color:#fff;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  opacity:0;
+  transition:0.4s ease;
+  z-index:3;
+}
+
+/* HOVER EFFECT */
+.insta-card:hover .logo{
+  opacity:0;
+  transform:scale(0.8);
+}
+
+.insta-card:hover .preview-track{
+  opacity:1;
+  animation:instaSlide 3s linear infinite;
+}
+
+.insta-card:hover .open-text{
+  opacity:1;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .insta-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<section class="insta-projects">
+  <h2>Client Instagram Projects</h2>
+
+  <div class="insta-grid">
+
+    <!-- CLIENT 1 -->
+    <a href="https://www.instagram.com/sri_palaniyandavar_rmc?igsh=amNzeHRyczhycTFx" 
+       target="_blank" class="insta-card">
+
+      <img src="Palaniyandavar RMC.jpeg" class="logo" alt="Client Logo">
+
+      <div class="preview-track">
+        <img src="RMC.jpg" alt="Preview 1">
+        <img src="RMC-2.jpg" alt="Preview 2">
+      </div>
+
+      <span class="open-text">Open Instagram</span>
+    </a>
+
+    <!-- CLIENT 2 -->
+    <a href="https://www.instagram.com/t_v_k_precast_pvt_ltd?igsh=MXR6ODYxajFzMXoyZA==" 
+       target="_blank" class="insta-card">
+
+      <img src="TVK.Jpeg" class="logo" alt="Client Logo">
+
+      <div class="preview-track">
+        <img src="TVKVK.jpg" alt="Preview 1">
+        <img src="TVKVK-2.jpg" alt="Preview 2">
+      </div>
+
+      <span class="open-text">Open Instagram</span>
+    </a>
+
+    <!-- CLIENT 3 -->
+    <a href="https://www.instagram.com/pv_centre?igsh=MnFhaWRtbnhmOGRj" 
+       target="_blank" class="insta-card">
+
+      <img src="clients/client3-logo.png" class="logo" alt="Client Logo">
+
+      <div class="preview-track">
+        <img src="NUT CENTER.jpg" alt="Preview 1">
+        <img src="NUT CENTER-2.jpg" alt="Preview 2">
+      </div>
+
+      <span class="open-text">Open Instagram</span>
+    </a>
+
+  </div>
+</section>
+
+</body>
+</html>

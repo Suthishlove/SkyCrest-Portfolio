@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Suriya Prakash | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+body{
+  background:#e6e6e6;
+  color:#222;
+}
+
+/* ===== LAYOUT ===== */
+.wrapper{
+  display:flex;
+  min-height:100vh;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:260px;
+  background:#0b2340;
+  color:#fff;
+  padding:25px;
+  position:fixed;
+  height:100%;
+}
+.logo{
+  font-size:20px;
+  font-weight:700;
+}
+.logo span{
+  font-size:12px;
+  display:block;
+  opacity:.7;
+}
+.nav{
+  margin-top:30px;
+}
+.nav a{
+  display:block;
+  padding:10px 0;
+  color:#cfd8e3;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav a:hover{
+  color:#fff;
+}
+
+/* ===== MAIN ===== */
+.main{
+  margin-left:260px;
+  padding:30px;
+  width:100%;
+}
+
+/* HEADER */
+.header{
+  background:#fff;
+  padding:20px;
+  border:1px solid #ccc;
+}
+.header h1{
+  font-size:26px;
+}
+.header p{
+  color:#555;
+}
+
+/* SECTION TITLE */
+.section-title{
+  background:#dedede;
+  padding:10px 15px;
+  font-weight:600;
+  margin-top:30px;
+  border-left:4px solid #5f9de9;
+}
+
+/* CONTENT BOX */
+.box{
+  background:#fff;
+  border:1px solid #ccc;
+  padding:20px;
+  margin-top:10px;
+}
+
+/* PROFILE */
+.profile{
+  display:flex;
+  gap:20px;
+}
+.profile img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:6px;
+}
+.profile-info p{
+  margin:6px 0;
+  font-size:14px;
+}
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+}
+.project-grid img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* LIST */
+ul{
+  padding-left:20px;
+}
+ul li{
+  margin-bottom:6px;
+  font-size:14px;
+}
+/* SECTION BG (same as certifications area) */
+.clients-section{
+  background:#e6e6e6;
+  padding:auto  40px;
+  
+}
+
+/* TITLE BAR */
+.section-title{
+  background:#dcdcdc;
+  padding:auto;
+  font-weight:600;
+  border-left:4px solid #1f6feb;
+  margin-bottom:20px;
+  font-size:18px;
+}
+
+/* WHITE BOX */
+.clients-white-box{
+  background:#ffffff;
+  border:1px solid #cfcfcf;
+  border-radius:4px;
+  padding:30px;
+max-width:1200px;
+  margin:0 auto;
+  align-items:center;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+/* CLIENT CARD */
+.client-card{
+  background:#0e223d;
+  display:flex;
+  align-items:center;
+  justify-content:center;height:150px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  text-decoration:none;
+}
+
+/* LOGO */
+.client-card img{
+  max-width:70%;
+  max-height:70%;
+  object-fit:contain;
+  transition:0.4s ease;
+}
+
+/* OVERLAY (Insta slide) */
+.client-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(14,34,61,0.95);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:#fff;
+
+  transform:translateX(-100%);
+  transition:0.4s ease;
+}
+
+/* ICON */
+.client-overlay i{
+  font-size:22px;
+  color:#e1306c;
+}
+
+/* TEXT */
+.client-overlay span{
+  font-size:15px;
+}
+
+/* HOVER EFFECT */
+.client-card:hover .client-overlay{
+  transform:translateX(0);
+}
+
+.client-card:hover img{
+  transform:scale(1.1);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .clients-white-box{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .clients-white-box{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+/* FOOTER SPACE */
+.space{height:40px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .sidebar{position:relative;width:100%}
+  .main{margin-left:0}
+}
+</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- ===== SIDEBAR ===== -->
+<div class="sidebar">
+ <div class="logo">
+  <img src="croped.png" alt="Sky Crest Logo" style="width: 180px;">
+  <span>Digital Marketing Agency</span>
+</div>
+
+  <div class="nav">
+    <a href="#personal">Personal Info</a>
+    <a href="#summary">Summary</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#certification">Certifications</a>
+    <a href="#clients">Clients</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Suriya Prakash</h1>
+    <p>Digital Marketer | Graphic Designer | Video Editor</p>
+  </div>
+
+  <!-- PERSONAL -->
+  <div id="personal" class="section-title">Personal Details</div>
+  <div class="box profile">
+    <img src="image.png" alt="Profile">
+    <div class="profile-info">
+      <p><strong>Founder – Sky Crest Digital Marketing Agency</strong></p>
+      <p>📍 Chennai, Tamil Nadu, India</p>
+      <p>📞 +91 93428 38848</p>
+      <p>📧 suthish8586@gmail.com</p>
+      <p>🌐 https://skycrestofficial.netlify.app/</p>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div id="summary" class="section-title">Professional Summary</div>
+  <div class="box">
+    Creative and detail-oriented Digital Marketing professional with strong hands-on experience
+    in graphic design, video editing, social media marketing, and brand promotions.
+    Worked with jewellery, furniture, construction, retail, and service-based brands.
+    Strong understanding of reels optimization, visual storytelling, and client-focused strategies.
+    <br><br>
+    Currently working as <strong>Project Assistant at Anna University</strong> while managing
+    freelance and agency-based digital marketing projects.
+  </div>
+
+  <!-- EDUCATION -->
+  <div id="education" class="section-title">Education</div>
+  <div class="box">
+    <ul>
+      <li><strong>B.Com – Computer Applications</strong> (2024) – 7.2 CGPA</li>
+      <li><strong>HSC</strong> – 80.5%</li>
+      <li><strong>SSLC</strong> – 69%</li>
+    </ul>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div id="experience" class="section-title">Professional Experience</div>
+  <div class="box">
+    <ul>
+      <li><strong>Project Assistant</strong> – Anna University (2025 – Present)</li>
+      <li><strong>Founder & Digital Marketing Specialist</strong> – Sky Crest Digital Marketing Agency</li>
+     
+      <li><strong>Data Entry Operator </strong>– Builders Engineering College</li>
+       <li><strong>Assistant Manager</strong> – Guru Law Firms</li>
+    </ul>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills" class="section-title">Technical Skills</div>
+  <div class="box grid">
+    <div>✔ Photoshop</div>
+    <div>✔ Illustrator</div>
+    <div>✔ Canva (Advanced)</div>
+    <div>✔ Premiere Pro</div>
+    <div>✔ HTML, CSS, JS</div>
+    <div>✔ Social Media Strategy</div>
+  </div>
+
+  <!-- CERTIFICATION -->
+  <div id="certification" class="section-title">Certifications</div>
+  <div class="box">
+    <ul>
+      <li>Digital Marketing (Practical Experience)</li>
+      <li>Graphic Design & Branding</li>
+      <li>Video Editing for Reels</li>
+      <li>Front End Developing</li>
+    </ul>
+  </div>
+  <section class="clients-section" id="clients">
+
+  <div class="section-title">Our Clients & Industries</div>
+
+  <div class="clients-white-box">
+
+    <a href="https://www.instagram.com/sri_palaniyandavar_rmc?igsh=amNzeHRyczhycTFx" target="_blank" class="client-card">
+      <img src="Palaniyandavar RMC.jpeg" alt="Client Logo">
+      <div class="client-overlay">
+        <i class="fab fa-instagram"></i>
+        <span>Open Page</span>
+      </div>
+    </a>
+
+    <a href=" https://www.instagram.com/t_v_k_precast_pvt_ltd?igsh=MXR6ODYxajFzMXoyZA==" target="_blank" class="client-card">
+      <img src="TVK.Jpeg" alt="Client Logo">
+      <div class="client-overlay">
+        <i class="fab fa-instagram"></i>
+        <span>Open Page</span>
+      </div>
+    </a>
+
+    <a href="3.  https://www.instagram.com/pv_centre?igsh=MnFhaWRtbnhmOGRj" target="_blank" class="client-card">
+      <img src="NUT CENTER.jpg" alt="Client Logo">
+      <div class="client-overlay">
+        <i class="fab fa-instagram"></i>
+        <span>Open Page</span>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+
+  
+
+  <!-- PROJECTS -->
+  <div id="projects" class="section-title">Projects & Highlights</div>
+  <div class="box">
+    <ul>
+        <li>Album Designing</li>
+        <li>Social Media Creatives </li>
+      <li>Anniversary creatives</li>
+      <li>Posters</li>
+      <li>Instagram reels editing</li>
+      <li>branding creatives for startups</li>
+      
+    </ul>
+  
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="section-title">Contact</div>
+  <div class="box">
+    📞 +91 93428 38848 <br>
+    📧 suthish8586@gmail.com <br>
+    🌐 https://skycrestofficial.netlify.app/
+  </div>
+
+  <div class="space"></div>
+
+
+
+
+</div>
+</div>
+
+
+</body>
+</html>
